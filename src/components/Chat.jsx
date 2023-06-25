@@ -1,3 +1,4 @@
+import "./Chat.css";
 
 // import { useSubscribe } from "streamr-client-react";
 import { useState, useRef, useEffect } from "react";
@@ -7,6 +8,7 @@ import { client, checkSubPermissions, checkPubPermissions } from "../utils/steam
 import { STREAMR_TOPIC } from "../config/constants";
 
 import Alert from "./Alert";
+
 
 
 function Chat({ address }) {
@@ -109,6 +111,17 @@ function Chat({ address }) {
     }
   }
 
+  // Display loading message when there are no messages
+  const waitingMessages = () =>
+  (
+    <div className={"text-center"}>
+      <h4 className={"text-center"}>Waiting for messages :)
+      </h4>
+      <img className={"spin"} src={"https://pbs.twimg.com/profile_images/1427159301299310598/hM2nChNL_400x400.png"} width={"80px"} />
+    </div>
+  )
+
+
   Chat.propTypes = {
     address: PropTypes.string.isRequired,
   }
@@ -118,7 +131,7 @@ function Chat({ address }) {
     <div className={"container"}>
       <div className="mt-3 col-md-6 offset-md-3">
         <div>
-          {messages.length === 0 && <h4 className={"text-center"}>No messages yet :c</h4>}
+          {messages.length === 0 && waitingMessages()}
           {messages.map(({ sender, text, date }, i) => (
             <div key={i} className={"card mb-3"}>
               <div className={`card-body pb-0 d-flex justify-content-between ${address == sender ? "flex-row" : "flex-row-reverse"}`}>
@@ -176,7 +189,7 @@ function Chat({ address }) {
         </div>
       </div>
       {error && <Alert message={error} color={"danger"} />}
-    </div>
+    </div >
   )
 
 }
