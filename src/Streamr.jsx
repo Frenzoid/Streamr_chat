@@ -23,7 +23,7 @@ function Streamr() {
       <hr />
       {isConnected ? <Chat address={address} /> : <Alert message={"Please, connect your wallet :)"} color={"warning"} />}
       <footer className={"fixed-bottom text-center"}>
-        Made by <a href="www.github.com/Frenzoid">@Frenzoid</a> with <span className={"text-danger"}>❤.</span>
+        Made by <a href="https://www.github.com/Frenzoid">@Frenzoid</a> with <span className={"text-danger"}>❤.</span>
       </footer>
     </div >
   )
