@@ -1,4 +1,4 @@
 - https://docs.streamr.network/quickstart/nodejs > Set Stream permissions > KEY POINT should link to https://docs.streamr.network/usage/streams/permissions
 - Specify the imports used for each example.
-- Rename stream object to client object.
+- Rename stream object to client object.c
 - Subscribe stream is mentioned to also be used to subscribe, but it doesn't actually work.
