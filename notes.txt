@@ -1,4 +1,8 @@
 - https://docs.streamr.network/quickstart/nodejs > Set Stream permissions > KEY POINT should link to https://docs.streamr.network/usage/streams/permissions
-- Specify the imports used for each example.
-- Rename stream object to client object.c
-- Subscribe stream is mentioned to also be used to subscribe, but it doesn't actually work.
+- Rename stream object to client object.
+- Add a function to search in the documentation.
+- Subscribe stream is mentioned to also be used to subscribing, but it doesn't work.
+- On Quickstart > Mention in which networks is the contract deployed.
+- web app frameworks > Subscribe to data of a stream > STREAM link sends to the projects hub.
+- There is no explaination in depth about plugins or ports to expose or docker run command examples.
+- Connect apps & IOT > specify ports and auth directly on the examples.
